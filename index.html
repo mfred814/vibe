@@ -1,0 +1,153 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Explore a curated collection of thoughtfully designed everyday essentials."
+    />
+    <title>Product Showcase</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="#" aria-label="Product Showcase home">
+        <span class="brand-mark" aria-hidden="true">P</span>
+        <span>studio<span class="brand-dot">.</span></span>
+      </a>
+      <button
+        class="theme-toggle"
+        id="theme-toggle"
+        type="button"
+        aria-label="Switch to dark mode"
+        aria-pressed="false"
+      >
+        <svg class="theme-icon theme-icon-sun" viewBox="0 0 24 24" aria-hidden="true">
+          <circle cx="12" cy="12" r="4" />
+          <path d="M12 2v2m0 16v2M4.93 4.93l1.42 1.42m11.3 11.3 1.42 1.42M2 12h2m16 0h2M4.93 19.07l1.42-1.42m11.3-11.3 1.42-1.42" />
+        </svg>
+        <svg class="theme-icon theme-icon-moon" viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M20.2 15.4A8.5 8.5 0 0 1 8.6 3.8 8.5 8.5 0 1 0 20.2 15.4Z" />
+        </svg>
+      </button>
+    </header>
+
+    <main>
+      <section class="showcase" aria-labelledby="page-title">
+        <div class="intro">
+          <p class="eyebrow"><span></span> The everyday edit</p>
+          <h1 id="page-title">Product Showcase</h1>
+          <p class="intro-copy">
+            Thoughtful design meets the things you reach for every day.
+          </p>
+        </div>
+
+        <div class="product-grid" aria-label="Featured products">
+          <article
+            class="product-card"
+            data-name="Studio Wireless Headphones"
+            data-description="Settle into your own world. Studio-quality sound, all-day comfort, and up to 40 hours of wireless listening in a beautifully minimal design."
+            data-price="$249"
+          >
+            <div class="product-image-wrap">
+              <img
+                class="product-image"
+                src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&amp;fit=crop&amp;w=1000&amp;q=85"
+                alt="Black wireless headphones on a warm neutral background"
+              />
+              <span class="product-tag">Bestseller</span>
+            </div>
+            <div class="product-content">
+              <div class="product-heading">
+                <h2>Studio Wireless Headphones</h2>
+                <span class="product-price">$249</span>
+              </div>
+              <p>Immersive sound. A quieter kind of focus.</p>
+              <button class="view-button" type="button">
+                View product
+                <span aria-hidden="true">↗</span>
+              </button>
+            </div>
+          </article>
+
+          <article
+            class="product-card"
+            data-name="Form Smartwatch"
+            data-description="A little more intention in every day. Track your movement, find your rhythm, and stay connected with a bright, always-ready display and a lightweight, considered fit."
+            data-price="$329"
+          >
+            <div class="product-image-wrap">
+              <img
+                class="product-image"
+                src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&amp;fit=crop&amp;w=1000&amp;q=85"
+                alt="Minimal smartwatch with a light-colored band"
+              />
+              <span class="product-tag product-tag-muted">New arrival</span>
+            </div>
+            <div class="product-content">
+              <div class="product-heading">
+                <h2>Form Smartwatch</h2>
+                <span class="product-price">$329</span>
+              </div>
+              <p>Your day, in better balance.</p>
+              <button class="view-button" type="button">
+                View product
+                <span aria-hidden="true">↗</span>
+              </button>
+            </div>
+          </article>
+
+          <article
+            class="product-card"
+            data-name="Everyday Sneakers"
+            data-description="Made for wherever the day takes you. These versatile everyday sneakers pair a breathable feel with a cushioned sole and an easy-to-style silhouette."
+            data-price="$145"
+          >
+            <div class="product-image-wrap">
+              <img
+                class="product-image"
+                src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&amp;fit=crop&amp;w=1000&amp;q=85"
+                alt="Colorful modern sneaker photographed against a red background"
+              />
+              <span class="product-tag product-tag-muted">Everyday essential</span>
+            </div>
+            <div class="product-content">
+              <div class="product-heading">
+                <h2>Everyday Sneakers</h2>
+                <span class="product-price">$145</span>
+              </div>
+              <p>Comfort that keeps up with you.</p>
+              <button class="view-button" type="button">
+                View product
+                <span aria-hidden="true">↗</span>
+              </button>
+            </div>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <span>Considered goods for everyday life.</span>
+      <span>© <span id="current-year"></span> Studio Goods</span>
+    </footer>
+
+    <dialog class="product-dialog" id="product-dialog" aria-labelledby="dialog-title">
+      <button class="dialog-close" type="button" aria-label="Close product details">×</button>
+      <p class="eyebrow"><span></span> A closer look</p>
+      <h2 id="dialog-title"></h2>
+      <p id="dialog-description"></p>
+      <p class="dialog-price" id="dialog-price"></p>
+      <button class="dialog-action" id="dialog-action" type="button">Add to your shortlist</button>
+      <p class="dialog-feedback" id="dialog-feedback" aria-live="polite"></p>
+    </dialog>
+  </body>
+</html>
